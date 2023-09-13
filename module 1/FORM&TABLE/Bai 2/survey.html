@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="mystyle" href="mystyle.css">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>
+    Market Research Survey
+</h1>
+<pre>Please take a few moments to complete this satisfaction survey
+</pre>
+<form method="POST">
+    <br>
+    What is your age range
+    <br>
+    <select name ="Range">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+
+
+
+    </select>
+    <br>
+    <p>
+        What is your yearly income range?
+    </p>
+
+    <br>
+    <select name="income">
+        <option value="$0-$25,000">$0-$25,000</option>
+        <option value="$25,001-$50,000">$25,001-$50,000</option>
+        <option value="$50,001-$100,000">$50,001-$100,000</option>
+        <option value="$100,000+">$100,000+</option>
+    </select>
+    <br>
+    <p>
+        Gender identity
+    </p>
+
+    <br>
+    <label><input name="Gender" value="Male" type="radio" checked/>Male</label><br>
+    <label><input name="Gender" value="Female" type="radio" checked/>Female</label><br>
+    <label><input name="Gender" value="Nonbinary" type="radio" checked/>NoneBinary</label><br>
+    <label><input name="Gender" value="Other" type="radio" checked/>Other</label><br>
+    <textarea cols="40" rows="2"></textarea><br>
+    <p>
+        Which of the following products have your purchased in the last 2 months.Please check all that apply
+    </p>
+    <br>
+    <label><input name="product" value="product 1" type="checkbox"/>product 1</label><br>
+    <label><input name="product" value="product 2" type="checkbox"/>product 2</label><br>
+    <label><input name="product" value="product 3" type="checkbox"/>product 3</label><br>
+    <p>
+        How often would you use our new product?
+    </p>
+    <br>
+    <label><input name="time" value="Daily" type="radio" checked/>Daily</label><br>
+    <label><input name="time" value="Weekly" type="radio" checked/>Weekly</label><br>
+    <label><input name="time" value="Monthly" type="radio" checked/>Monthly</label><br>
+    <p>
+        What would you pay for the new product?
+    </p>
+    <br>$
+    <input name="$" type="number">.Cents
+    <input name="$" type="number"><br>
+    <p>
+        What features would you like to see in the new product.
+    </p>
+    <br>
+    <textarea cols="40" rows="3"></textarea>
+
+</form>
+
+</body>
+</html>

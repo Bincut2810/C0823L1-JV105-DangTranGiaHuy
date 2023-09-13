@@ -1,0 +1,72 @@
+/* Apply general styling to the entire form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}
+
+/* Style the form headings */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+pre {
+    text-align: center;
+    font-style: italic;
+}
+
+/* Style form elements */
+select,
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+/* Style radio buttons and checkboxes */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Style radio buttons and checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+/* Additional styling for specific elements */
+p {
+    font-weight: bold;
+}
+
+/* Style the age range and income range select boxes */
+select[name="Range"],
+select[name="income"] {
+    width: 100%;
+}
+
+/* Adjust styling for the textarea in the "features" section */
+textarea {
+    resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
