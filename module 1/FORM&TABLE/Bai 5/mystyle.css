@@ -1,0 +1,38 @@
+/* Apply basic styles to the entire table */
+.styled-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+/* Style table header cells */
+.header {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/* Style table header cells for days */
+.day-header {
+    background-color: #e0e0e0;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Style table cells */
+.styled-table td, .styled-table th {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Add alternating row background color */
+.styled-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style the table title */
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
