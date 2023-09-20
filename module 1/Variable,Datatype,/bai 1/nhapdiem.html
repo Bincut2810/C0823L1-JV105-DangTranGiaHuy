@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinh diem trung binh</title>
+</head>
+<body>
+<h1>nhap diem</h1>
+<form id="gradesForm">
+    <label for="physics">Vat ly:</label>
+    <input type="number" id="physics" min="0" max="10" step="0.1"><br>
+
+    <label for="chemistry">Hoa hoc:</label>
+    <input type="number" id="chemistry" min="0" max="10" step="0.1"><br>
+
+    <label for="biology">Sinh hoc:</label>
+    <input type="number" id="biology" min="0" max="10" step="0.1"><br>
+
+    <input type="button" value="tinh diem" onclick="calculateGrades()">
+</form>
+
+<h2>Ket qua:</h2>
+<p>Diem trung binh: <span id="average"></span></p>
+<p>Tong diem: <span id="total"></span></p>
+
+<script>
+    function calculateGrades() {
+        // Lấy giá trị từ các ô nhập liệu
+        var physicsGrade = parseFloat(document.getElementById("physics").value);
+        var chemistryGrade = parseFloat(document.getElementById("chemistry").value);
+        var biologyGrade = parseFloat(document.getElementById("biology").value);
+
+
+        var totalGrade = physicsGrade + chemistryGrade + biologyGrade;
+
+
+        var averageGrade = totalGrade / 3;
+
+
+        document.getElementById("average").textContent = averageGrade.toFixed(2);
+        document.getElementById("total").textContent = totalGrade.toFixed(2);
+    }
+</script>
+</body>
+</html>
