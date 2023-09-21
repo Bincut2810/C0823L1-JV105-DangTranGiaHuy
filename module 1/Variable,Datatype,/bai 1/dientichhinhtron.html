@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dien tich hinh tron</title>
+</head>
+<body>
+<h1>Tinh dien tich hinh tron</h1>
+
+<label for="radiusInput">Nhap ban kinh (r):</label>
+<input type="number" id="radiusInput">
+<button onclick="calculateArea()">Tinh dien tich</button>
+
+<p id="result"></p>
+
+<script>
+    function calculateArea() {
+
+        var radius = parseFloat(document.getElementById("radiusInput").value);
+
+
+        var area = Math.PI * radius * radius;
+
+
+        var resultElement = document.getElementById("result");
+        resultElement.innerHTML = "Dien tich hinh tron la : " + area.toFixed(2);
+    }
+</script>
+</body>
+</html>
