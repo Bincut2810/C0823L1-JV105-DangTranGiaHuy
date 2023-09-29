@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh chi so BMI</title>
+</head>
+<body>
+<h1>Tinh chi so BMI co the </h1>
+<label for="can_nang">Nhap can nang: (kg)</label>
+<input type="text" name id="can_nang">
+<br>
+<br>
+<label for="chieu cao">Nhap chieu cao: (m)</label>
+<input type="text" name id="chieu cao">
+<br>
+<br>
+<button onclick="kiem_tra()">Kiem tra</button>
+<p id="result"></p>
+<script>
+    function kiem_tra() {
+        let can_nang=document.getElementById("can_nang").value;
+        let chieu cao =document.getElementById("chieu cao").value;
+        let bmi = can_nang / (chieu cao ^ 2);
+        let result = "";
+        if (bmi < 18)
+            result="Underweight";
+         else if (bmi < 25.0)
+            result="Normal";
+         else if (bmi < 30.0)
+            result="Overweight";
+        else
+            result="Obese";
+
+        document.getElementById("result").innerHTML="Chi so BMI la "+ bmi
+    }
+</script>
+</body>
+</html>
