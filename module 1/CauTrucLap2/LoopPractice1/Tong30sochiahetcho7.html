@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tinh tong 30 so dau tien chia het cho 7</title>
+</head>
+<body>
+<h1>Tinh tong 30 so dau tien chia het cho 7</h1>
+<p id="result">Result: </p>
+
+<script>
+
+  let sum = 0;
+  let count = 0;
+
+
+  for (let i = 1; ; i++) {
+
+    if (i % 7 === 0) {
+
+      sum += i;
+
+      count++;
+
+
+      if (count === 30) {
+        break;
+      }
+    }
+  }
+
+
+  document.getElementById("result").textContent += sum;
+</script>
+</body>
+</html>
