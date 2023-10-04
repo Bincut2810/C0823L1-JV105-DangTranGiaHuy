@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8eda2bfc-44f7-4e9e-9a48-31d5a60c308a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mystyle.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Bai 6/lich.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Bài 1/Bài 1.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Bài 2/bài 2.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Bài 3/bài 3.docx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Bai 2/survey.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Bai 2/survey.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Bai 5.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/covua.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../Git&amp;HTML/Bai 2/Cv.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../Git&amp;HTML/Bai 2/Cv.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,6 +74,8 @@
       <workItem from="1694690623655" duration="546000" />
       <workItem from="1694778161482" duration="1232000" />
       <workItem from="1694779452287" duration="109000" />
+      <workItem from="1694783726671" duration="21000" />
+      <workItem from="1694783865009" duration="10000" />
     </task>
     <servers />
   </component>
