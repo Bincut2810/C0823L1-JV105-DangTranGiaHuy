@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goc vuong voi vong lap</title>
+</head>
+<body>
+<div id="square"></div>
+<script>
+
+    var rows = 5;
+    var columns = 5;
+
+    // Biến để lưu trữ kết quả HTM
+    var squareHTML = '';
+
+    // Vòng lặp while để tạo góc vuông
+    var i = 0;
+    while (i < rows) {
+        var j = 0;
+        while (j < columns) {
+            squareHTML += '* ';
+            j++;
+        }
+        squareHTML += '<br>';
+        i++;
+    }
+
+
+    document.getElementById('square').innerHTML = squareHTML;
+</script>
+</body>
+</html>

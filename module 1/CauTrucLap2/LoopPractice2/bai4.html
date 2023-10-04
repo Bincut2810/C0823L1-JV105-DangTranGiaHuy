@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinh lai ngan hang</title>
+</head>
+<body>
+<h1>Tinh lai ngan hang</h1>
+
+<label for="principal">So tien ban dau:</label>
+<input type="number" id="principal" placeholder="First Money"><br>
+
+<label for="months">So thang cho vay:</label>
+<input type="number" id="months" placeholder="Months for hiding"><br>
+
+<label for="interestRate">Lai suat hang thang (%):</label>
+<input type="number" id="interestRate" placeholder="Monthly interest rate"><br>
+
+<button onclick="calculateInterest()">Tính lãi</button>
+
+<p id="result"></p>
+
+<script>
+    function calculateInterest() {
+
+        var principal = parseFloat(document.getElementById("principal").value);
+        var months = parseInt(document.getElementById("months").value);
+        var interestRate = parseFloat(document.getElementById("interestRate").value);
+
+
+        if (isNaN(principal) || isNaN(months) || isNaN(interestRate)) {
+            document.getElementById("result").textContent = "Vui long nhap day du thong tin";
+            return;
+        }
+
+        var totalInterest = 0;
+
+
+        for (var i = 0; i < months; i++) {
+            var monthlyInterest = (principal * interestRate) / 100;
+            totalInterest += monthlyInterest;
+            principal += monthlyInterest;
+        }
+
+
+        document.getElementById("result").textContent = "Tong lai sau " + months + " thang la: " + totalInterest.toFixed(2) + " VND";
+    }
+</script>
+</body>
+</html>

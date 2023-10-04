@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinh giai thua</title>
+</head>
+<body>
+<script>
+    function tinhGiaiThua() {
+        var n = parseInt(document.getElementById("inputNumber").value);
+        var giaiThua = 1;
+
+        for (var i = 1; i <= n; i++) {
+            giaiThua *= i;
+        }
+
+        document.getElementById("ketQua").innerHTML = "Giai thua cua " + n + " la " + giaiThua;
+    }
+</script>
+
+<h1>Tinh giai thua mot so nguyen duong</h1>
+<p>Nhap mot so nguyen duong : </p>
+<input type="number" id="inputNumber" min="1" required>
+<button onclick="tinhGiaiThua()">Tinh giai thua</button>
+<p id="ketQua"></p>
+</body>
+</html>
