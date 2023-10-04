@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="doanso()">Bat dau</button>
+<script>
+    function doanso() {
+        debugger;
+        let number = +prompt("so ban muon doan trong khoang bao nhieu?")
+        let num_ran = Math.floor(Math.random() * number);
+        console.log(num_ran);
+        let num_check = +prompt("Nhap so ban doan");
+        let count = 0;
+        while (num_check !== num_ran) {
+            count++;
+            if (count == 3) {
+                alert("ban het so lan doan roi")
+                break;
+
+            } else if (num_check < num_ran) {
+                alert("so ban doan be hon");
+            } else {
+                alert("So ban doan lon hon")
+            }
+            num_check = prompt("nhap so ban doan");
+        }
+        if (count == 4) {
+            document.write("ban het so lan doan")
+        } else {
+            document.write("ban da doan dung so. tks my boy!!!")
+        }
+
+    }
+</script>
+
+</body>
+</html>

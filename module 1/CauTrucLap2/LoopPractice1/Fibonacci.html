@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fibonacci Sequence</title>
+</head>
+<body>
+<h1>First 20 Fibonacci numbers</h1>
+<ul id="fibonacci-list"></ul>
+
+<script>
+    function generateFibonacci(n) {
+        let fibonacciNumbers = [];
+        let a = 0, b = 1;
+
+        for (let i = 0; i < n; i++) {
+            fibonacciNumbers.push(a);
+            let next = a + b;
+            a = b;
+            b = next;
+        }
+
+        return fibonacciNumbers;
+    }
+
+    const fibonacciList = document.getElementById('fibonacci-list');
+    const first20Fibonacci = generateFibonacci(20);
+
+    for (let i = 0; i < first20Fibonacci.length; i++) {
+        const listItem = document.createElement('li');
+        listItem.textContent = first20Fibonacci[i];
+        fibonacciList.appendChild(listItem);
+    }
+</script>
+</body>
+</html>

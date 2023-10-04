@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Tong 20 so Fibonacci dau tien</h1>
+
+<script>
+    function tinhTongFibonacci(n) {
+        let a = 0;
+        let b = 1;
+        let tong = 0;
+        let count = 0;
+
+        while (count < n) {
+            tong += a;
+            const temp = a;
+            a = b;
+            b = temp + b;
+            count++;
+        }
+
+        return tong;
+    }
+
+    const soLuongFibonacci = 20;
+    const tongFibonacci = tinhTongFibonacci(soLuongFibonacci);
+    console.log(`Tổng của ${soLuongFibonacci} số đầu tiên trong dãy Fibonacci là: ${tongFibonacci}`);
+
+</script>
+
+</body>
+</html>
