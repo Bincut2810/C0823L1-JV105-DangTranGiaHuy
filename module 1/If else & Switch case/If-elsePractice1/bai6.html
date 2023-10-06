@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinh hoa hong</title>
+</head>
+<body>
+<h1>Tinh hoa hong</h1>
+<label for="doanhSo">Nhap muc doanh so ban hang:</label>
+<input type="number" id="doanhSo">
+<button onclick="tinhHoaHong()">Tinh hoa hong</button>
+<p id="ketQua"></p>
+
+<script>
+    function tinhHoaHong() {
+
+        var doanhSo = parseFloat(document.getElementById("doanhSo").value);
+
+
+        var hoaHong;
+
+
+        if (doanhSo < 1000000) {
+            hoaHong = doanhSo * 0.05; // Hoa hồng 5%
+        } else if (doanhSo < 2000000) {
+            hoaHong = doanhSo * 0.07; // Hoa hồng 7%
+        } else {
+            hoaHong = doanhSo * 0.1; // Hoa hồng 10%
+        }
+
+
+        document.getElementById("ketQua").innerHTML = "Hoa hong nhan duoc: " + hoaHong + " VND";
+    }
+</script>
+</body>
+</html>

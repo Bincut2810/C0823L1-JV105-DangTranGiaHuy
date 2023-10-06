@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Xep hang hoc luc</title>
+</head>
+<body>
+<h1>Xep hang hoc luc</h1>
+<label for="diemKiemTra">Diem bai kiem tra:</label>
+<input type="number" id="diemKiemTra" min="0" max="10"><br>
+
+<label for="diemGiuaKy">Diem thi giua ki:</label>
+<input type="number" id="diemGiuaKy" min="0" max="10"><br>
+
+<label for="diemCuoiKy">Diem thi cuoi ki :</label>
+<input type="number" id="diemCuoiKy" min="0" max="10"><br>
+
+<button onclick="tinhXepHang()">Tinh xep hang</button>
+
+<p id="xepHang"></p>
+
+<script>
+  function tinhXepHang() {
+
+    var diemKiemTra = parseFloat(document.getElementById("diemKiemTra").value);
+    var diemGiuaKy = parseFloat(document.getElementById("diemGiuaKy").value);
+    var diemCuoiKy = parseFloat(document.getElementById("diemCuoiKy").value);
+
+
+    var diemTrungBinh = (diemKiemTra + diemGiuaKy + diemCuoiKy) / 3;
+
+
+    var xepHang = "";
+
+    if (diemTrungBinh >= 8) {
+      xepHang = "Hoc sinh gioi";
+    } else if (diemTrungBinh >= 6.5) {
+      xepHang = "Hoc sinh kha";
+    } else if (diemTrungBinh >= 5) {
+      xepHang = "Hoc sinh trung binh";
+    } else {
+      xepHang = "Hoc sinh yeu";
+    }
+
+
+    document.getElementById("xepHang").innerText = "Xep hang hoc luc: " + xepHang;
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tim gia tri lon nhat</title>
+</head>
+<body>
+<h1>Tim gia tri lon nhat cua 3 so nguyen</h1>
+<p>Nhap 3 so nguyen:</p>
+<input type="number" id="number1" placeholder="So thu nhat">
+<input type="number" id="number2" placeholder="So thu hai">
+<input type="number" id="number3" placeholder="So thu ba">
+<button onclick="findMax()">Tim gia tri lon nhat</button>
+<p id="result"></p>
+
+<script>
+  function findMax() {
+    var number1 = parseInt(document.getElementById("number1").value);
+    var number2 = parseInt(document.getElementById("number2").value);
+    var number3 = parseInt(document.getElementById("number3").value);
+
+
+    var max = Math.max(number1, number2, number3);
+
+
+    document.getElementById("result").innerHTML = "Gia tri lon nhat la : " + max;
+  }
+</script>
+</body>
+</html>

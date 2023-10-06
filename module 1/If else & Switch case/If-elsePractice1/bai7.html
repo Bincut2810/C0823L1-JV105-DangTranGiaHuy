@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinh cuoc dien thoai</title>
+    <script>
+        function tinhCuocDienThoai() {
+
+            var soPhutSuDung = parseInt(document.getElementById("soPhutSuDung").value);
+            var loaiCuoc = document.getElementById("loaiCuoc").value;
+            var cuocCoBan = 25;
+
+
+            if (loaiCuoc === "TrongNha") {
+
+                var cuocTrongNha = 0.05 * soPhutSuDung;
+                var tongCuoc = cuocCoBan + cuocTrongNha;
+            } else {
+
+                var cuocNgoaiNha = 0.1 * soPhutSuDung;
+                var tongCuoc = cuocCoBan + cuocNgoaiNha;
+            }
+
+
+            document.getElementById("ketQua").innerHTML = "Tong cuoc dien thoai la: $" + tongCuoc.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+<h1>Tinh cuoc dien thoai</h1>
+<label for="soPhutSuDung">So phut su dung:</label>
+<input type="text" id="soPhutSuDung"><br>
+
+<label for="loaiCuoc">Loai cuoc goi:</label>
+<select id="loaiCuoc">
+    <option value="TrongNha">Trong nha</option>
+    <option value="NgoaiNha">Ngoai nha</option>
+</select><br>
+
+<button onclick="tinhCuocDienThoai()">Tinh cuoc</button>
+
+<p id="ketQua"></p>
+</body>
+</html>
