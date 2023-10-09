@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kiem tra canh cua tam giac</title>
+</head>
+<body>
+<h1>Kiem tra tam giac</h1>
+<p>Nhap 3 so a b c de kiem tra co phai la mot canh cua tam giac khong</p>
+
+<input type="number" id="a" placeholder="a">
+<input type="number" id="b" placeholder="b">
+<input type="number" id="c" placeholder="c">
+<button onclick="kiemTraTamGiac()">Check check</button>
+
+<p id="ketqua"></p>
+
+<script>
+  function kiemTraTamGiac() {
+    // Lấy giá trị từ các input
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+    var c = parseFloat(document.getElementById("c").value);
+
+    // Kiểm tra điều kiện tam giác
+    if (a > 0 && b > 0 && c > 0 && (a + b > c) && (b + c > a) && (a + c > b)) {
+      document.getElementById("ketqua").innerHTML = "a, b, c la canh cua mot tam giac";
+    } else {
+      document.getElementById("ketqua").innerHTML = "a, b, c khong phai la mot canh cua tam giac";
+    }
+  }
+</script>
+</body>
+</html>

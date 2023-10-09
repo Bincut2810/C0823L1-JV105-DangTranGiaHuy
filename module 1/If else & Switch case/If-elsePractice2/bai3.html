@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tinh dien tich hinh vuong</title>
+</head>
+<body>
+<h1>Tinh dien tich hinh vuong</h1>
+<label>Nhap do dai canh  a: <input type="text" id="sideLength"></label>
+<button onclick="calculateArea()">Tinh dien tich</button>
+<p id="result"></p>
+
+<script>
+  function calculateArea() {
+    var sideLength = parseFloat(document.getElementById('sideLength').value);
+    if (!isNaN(sideLength)) {
+      var area = sideLength * sideLength;
+      document.getElementById('result').innerHTML = "Dien tich hinh vuong la: " + area + " don vi";
+    } else {
+      document.getElementById('result').innerHTML = "vui long nhap so hop le";
+    }
+  }
+</script>
+</body>
+</html>

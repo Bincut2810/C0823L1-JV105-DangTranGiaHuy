@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dien tich hinh chu nhat</title>
+</head>
+<body>
+<h1>Dien tich hinh chu nhat</h1>
+<label>Nhap do dai canh a: <input type="text" id="sideA"></label>
+<label>Nhap do dai canh b: <input type="text" id="sideB"></label>
+<button onclick="calculateArea()">Tinh dien tich</button>
+<p id="result"></p>
+
+<script>
+    function calculateArea() {
+        var sideA = parseFloat(document.getElementById('sideA').value);
+        var sideB = parseFloat(document.getElementById('sideB').value);
+        if (!isNaN(sideA) && !isNaN(sideB)) {
+            var area = sideA * sideB;
+            document.getElementById('result').innerHTML = "Dien tich hinh chu nhat la: " + area + " don vi";
+        } else {
+            document.getElementById('result').innerHTML = "Vui long nhap lai 2 so hop le ";
+        }
+    }
+</script>
+</body>
+</html>

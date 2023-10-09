@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chuyen doi feet sang met</title>
+</head>
+<body>
+<h1>Chuyen doi feet sang met</h1>
+<label>Nhap feet: <input type="text" id="feet"></label>
+<button onclick="convert()">Chuyen doi</button>
+<p id="result"></p>
+
+<script>
+    function convert() {
+        var feet = parseFloat(document.getElementById('feet').value);
+        if (!isNaN(feet)) {
+            var meters = feet / 3.2808;
+            document.getElementById('result').innerHTML = feet + " feet = " + meters + " met";
+        } else {
+            document.getElementById('result').innerHTML = "Vui long nhap so hop le.";
+        }
+    }
+</script>
+</body>
+</html>

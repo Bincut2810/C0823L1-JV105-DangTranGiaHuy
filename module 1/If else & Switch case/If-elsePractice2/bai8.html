@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Kiem tra tuoi</title>
+</head>
+<body>
+<h1>Age checking</h1>
+<label>Nhap tuoi: <input type="number" id="tuoiInput"></label>
+<button onclick="kiemTraTuoi()">Kiem tra</button>
+<p id="ketQua"></p>
+
+<script>
+  function kiemTraTuoi() {
+    // Lấy giá trị từ ô nhập số tuổi
+    var tuoi = parseInt(document.getElementById("tuoiInput").value);
+
+    // Kiểm tra xem tuổi có nằm trong khoảng hợp lệ (0 đến 120) hay không
+    if (tuoi > 0 && tuoi <= 120) {
+      document.getElementById("ketQua").innerHTML = "Day la mot tuoi hop le";
+    } else {
+      document.getElementById("ketQua").innerHTML = "Day khong phai la tuoi cua mot nguoi";
+    }
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Giai phuong trinh bac 1</title>
+</head>
+<body>
+<h1>Giai phuong trinh bac 1 (Ax + B = 0)</h1>
+<label>Nhap gia tri A: <input type="text" id="coefA"></label>
+<label>Nhap gia tri B: <input type="text" id="coefB"></label>
+<button onclick="solveEquation()">Giai phuong trinh</button>
+<p id="result"></p>
+
+<script>
+  function solveEquation() {
+    var coefA = parseFloat(document.getElementById('coefA').value);
+    var coefB = parseFloat(document.getElementById('coefB').value);
+
+    if (!isNaN(coefA) && !isNaN(coefB)) {
+      if (coefA === 0) {
+        if (coefB === 0) {
+          document.getElementById('result').innerHTML = "Phuong trinh co vo so nghiem";
+        } else {
+          document.getElementById('result').innerHTML = "Phuong trinh vo nghiem";
+        }
+      } else {
+        var solution = -coefB / coefA;
+        document.getElementById('result').innerHTML = "Nghiem cua phuong trinh la x = " + solution;
+      }
+    } else {
+      document.getElementById('result').innerHTML = "Vui long nhap gia tri hop le ";
+    }
+  }
+</script>
+</body>
+</html>
