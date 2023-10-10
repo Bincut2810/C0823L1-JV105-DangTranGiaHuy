@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinh lai ngan hang</title>
+</head>
+<body>
+<h1>Tinh lai ngan hang</h1>
+
+<label for="initialAmount">So tien ban dau (VND): </label>
+<input type="number" id="initialAmount"><br>
+
+<label for="months">So thang cho vay: </label>
+<input type="number" id="months"><br>
+
+<label for="interestRate">Lai suat hang thang :  </label>
+<input type="number" id="interestRate"><br>
+
+<button onclick="tinhLai()">Tinh lai </button>
+
+<p id="result"></p>
+
+<script>
+    function tinhLai() {
+
+        var initialAmount = parseFloat(document.getElementById("initialAmount").value);
+        var months = parseInt(document.getElementById("months").value);
+        var interestRate = parseFloat(document.getElementById("interestRate").value);
+
+
+        var finalAmount;
+
+        if (isNaN(initialAmount) || isNaN(months) || isNaN(interestRate)) {
+            alert("Vui long nhap so hop le");
+        } else {
+            finalAmount = initialAmount;
+
+            for (var i = 0; i < months; i++) {
+                finalAmount += (finalAmount * interestRate / 100);
+            }
+
+
+            var resultElement = document.getElementById("result");
+            resultElement.innerHTML = "So tien sau " + months + " thang la " + finalAmount.toFixed(2) + " VND";
+        }
+    }
+</script>
+</body>
+</html>
