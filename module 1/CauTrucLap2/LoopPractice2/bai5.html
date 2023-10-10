@@ -1,10 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Tinh lai ngan hang</title>
 </head>
 <body>
+<script>
 
+    const soTienBanDau = 1000;
+    const soThangChoVay = 12;
+    const laiXuatHangThang = 0.01;
+
+    let soTienCuoiKy = soTienBanDau;
+    for (let thang = 1; thang <= soThangChoVay; thang++) {
+        soTienCuoiKy += soTienCuoiKy * laiXuatHangThang;
+    }
+
+    console.log("So tien cuoi ki sau " + soThangChoVay + " thang la : " + soTienCuoiKy.toFixed(2));
+
+
+    let thangHienTai = 1;
+    let soTienCuoiKy2 = soTienBanDau;
+    while (thangHienTai <= soThangChoVay) {
+        soTienCuoiKy2 += soTienCuoiKy2 * laiXuatHangThang;
+        thangHienTai++;
+    }
+
+    console.log("So tien cuoi ki sau " + soThangChoVay + " thang la: " + soTienCuoiKy2.toFixed(2));
+</script>
 </body>
 </html>
