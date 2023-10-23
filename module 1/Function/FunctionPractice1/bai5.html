@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sao1 = ["Polaris","Aldebaran","Deneb","Vega","Altair","Dubhe","Regulus"]
+    let sao2 = ["Ursa Minor","Taurus","Cygnus","Lyra","Aquila","Ursa Major","Leo"]
+
+    function checkStar(star) {
+        let indexStar1 = 0;
+        let result = "";
+        for (let i = 0; i < sao1.length; i++) {
+            if (star === sao1[i]) {
+                indexStar1 = i;
+                for (let j = 0; j < sao2.length; j++) {
+                    if (indexStar1 === j) {
+                        result = sao2[j];
+                        return result;
+                    } else {
+                        result = "Nhap lai chom sao";
+                        return result;
+                    }
+                }
+            } else {
+                result = "khong tim thay chom sao";
+                return result;
+            }
+        }
+    }
+    let star = prompt("nhap vao ngoi sao bat ki: ")
+    document.write(checkStar(star));
+
+</script>
+</body>
+</html>
