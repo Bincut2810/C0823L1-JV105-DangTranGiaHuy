@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra so nguyen to</title>
+</head>
+<body>
+<script>
+    let number = parseInt(prompt("Nhap so vao day"));//lay input tu nguoi dung
+    isPrime(number);//dung ham isPrime de check so
+
+    function isPrime(number) {//tao ham check so nguyen to
+        let count = 0;//dem so uoc
+        let isPrime = false;
+
+        if (number == 0) {
+            alert(number + "khong phai so nguyen to")
+
+        } else {
+            for (let i = 1; i <= number; i++) {
+                if (number % i == 0) {
+                    count += 1;
+                }
+            }
+            if (count == 2) {
+                isPrime = true
+            }
+            if (isPrime) {
+                alert(number + "la so nguyen to ")
+            } else {
+                alert(number + "khong la so nguyen to")
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
