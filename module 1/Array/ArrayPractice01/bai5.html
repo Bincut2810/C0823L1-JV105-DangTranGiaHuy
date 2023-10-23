@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dem so nguyen am trong chuoi</title>
+</head>
+<body>
+<h1>Dem so nguyen am trong chuoi</h1>
+
+<label for="inputString">Nhap chuoi</label>
+<input type="text" id="inputString">
+<button onclick="countNegativeIntegers()">Dem so nguyen am</button>
+
+<p>So luong nguyen am la <span id="result"></span></p>
+
+<script>
+    function countNegativeIntegers() {
+        const inputElement = document.getElementById("inputString");
+        const resultElement = document.getElementById("result");
+
+        const inputString = inputElement.value;
+
+        // Tách chuỗi thành các từ
+        const words = inputString.split(' ');
+
+        let count = 0;
+
+
+        words.forEach(word => {
+            if (/^-?\d+$/.test(word)) {
+                const number = parseInt(word);
+                if (number < 0) {
+                    count++;
+                }
+            }
+        });
+
+        resultElement.textContent = count;
+    }
+</script>
+</body>
+</html>

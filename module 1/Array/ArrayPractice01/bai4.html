@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dao nguoc mang so nguyen</title>
+</head>
+<body>
+<h1>Dao nguoc mang so nguyen</h1>
+
+<label for="arrayInput">Nhap mang so nguyen vao day ( cach nhau bang dau phay ):</label>
+<input type="text" id="arrayInput">
+<button onclick="reverseArray()">Dao nguoc ( Reverse ) </button>
+
+<p>ket qua: <span id="result"></span></p>
+
+<script>
+    function reverseArray() {
+        const inputElement = document.getElementById("arrayInput");
+        const resultElement = document.getElementById("result");
+
+        const inputArray = inputElement.value.split(',').map(item => parseInt(item));
+
+        // Sử dụng phương thức reverse để đảo ngược mảng
+        const reversedArray = inputArray.reverse();
+
+        resultElement.textContent = reversedArray.join(', ');
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tim so trong mang</title>
+</head>
+<body>
+<h1>Tim so trong mang</h1>
+
+<label for="arrayInput">Nhap mang so nguyen ( cach nhau bang dau phay )</label>
+<input type="text" id="arrayInput">
+
+<label for="numberInput">Nhap so nguyen V</label>
+<input type="text" id="numberInput">
+
+<button onclick="checkNumberInArray()">Kiem tra</button>
+
+<p id="result"></p>
+
+<script>
+    function checkNumberInArray() {
+        const arrayInput = document.getElementById("arrayInput").value;
+        const numberInput = document.getElementById("numberInput").value;
+        const resultElement = document.getElementById("result");
+
+        // Chuyển chuỗi nhập thành mảng số nguyên
+        const integerArray = arrayInput.split(',').map(item => parseInt(item));
+
+        const numberToFind = parseInt(numberInput);
+
+        // Kiểm tra xem số V có thuộc mảng hay không
+        if (integerArray.includes(numberToFind)) {
+            resultElement.textContent = numberToFind + " is in the array.";
+        } else {
+            resultElement.textContent = numberToFind + " is not in the array.";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tim phan tu lon nhat trong mang</title>
+</head>
+<body>
+<script>
+
+    const mangSoNguyen = [5, 12, 8, 15, 3, 10, 9, 20, 7, 11];
+
+
+    let giaTriLonNhat = mangSoNguyen[0];
+    let viTriLonNhat = 0;
+
+
+    for (let i = 1; i < mangSoNguyen.length; i++) {
+        if (mangSoNguyen[i] > giaTriLonNhat) {
+            giaTriLonNhat = mangSoNguyen[i];
+            viTriLonNhat = i;
+        }
+    }
+
+    console.log("Phan tu lon nhat trong mang la " + giaTriLonNhat);
+    console.log("Vi tri cua phan tu lon nhat trong mang la " + viTriLonNhat);
+</script>
+</body>
+</html>

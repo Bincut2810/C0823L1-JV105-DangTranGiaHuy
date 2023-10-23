@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gia tri lon nhat va gia tri trung binh trong mang</title>
+</head>
+<body>
+<script>
+
+    const mangSoNguyen = [5, 12, 8, 15, 3, 10, 9, 20, 7, 11];
+
+
+    let giaTriLonNhat = mangSoNguyen[0];
+    for (let i = 1; i < mangSoNguyen.length; i++) {
+        if (mangSoNguyen[i] > giaTriLonNhat) {
+            giaTriLonNhat = mangSoNguyen[i];
+        }
+    }
+
+
+    let tong = 0;
+    for (let i = 0; i < mangSoNguyen.length; i++) {
+        tong += mangSoNguyen[i];
+    }
+    const giaTriTrungBinh = tong / mangSoNguyen.length;
+
+    console.log("Gia tri lon nhat trong mang la " + giaTriLonNhat);
+    console.log("Gia tri trung binh cua cac gia tri trong mang la " + giaTriTrungBinh);
+</script>
+</body>
+</html>
