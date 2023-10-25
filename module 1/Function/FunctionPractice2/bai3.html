@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinh giai thua</title>
+</head>
+<body>
+<h1>Tinh giai thua </h1>
+<p>Nhap vao so nguyen de tinh giai thua</p>
+<input type="number" id="inputNumber">
+<button onclick="tinhGiaiThua()">Tinh giai thua</button>
+<p id="ketQua"></p>
+
+<script>
+    function tinhGiaiThua() {
+        let inputNumber = document.getElementById("inputNumber").value;
+        let ketQua = document.getElementById("ketQua");
+
+        if (inputNumber < 0) {
+            ketQua.innerText = "Khong the tinh giai thua cho so am";
+        } else {
+            let giaiThua = tinhGiaiThuaRecursive(inputNumber);
+            ketQua.innerText = `Giai thua cua ${inputNumber} la ${giaiThua}`;
+        }
+    }
+
+    function tinhGiaiThuaRecursive(n) {
+        if (n === 0 || n === 1) {
+            return 1;
+        } else {
+            return n * tinhGiaiThuaRecursive(n - 1);
+        }
+    }
+</script>
+</body>
+</html>

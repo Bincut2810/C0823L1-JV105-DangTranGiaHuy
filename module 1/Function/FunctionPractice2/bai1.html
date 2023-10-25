@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+square of <input type="text" id="input" oninput="calculate()"/> is <span id="result"></span>
+<script>
+    function binhPhuong (a) {
+        var result = a * a;
+        return result;
+
+    }
+    function calculate() {
+        let input = document.getElementById("input").value;
+        let result = binhPhuong(input)
+        document.getElementById("result").innerHTML = result;
+    }
+
+</script>
+
+
+</body>
+</html>
