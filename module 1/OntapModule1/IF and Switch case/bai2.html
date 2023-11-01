@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kiem tra nguyen am hay phu am</title>
+</head>
+<body>
+<h1>Kiem tra nguyen am hay phu am</h1>
+
+<label for="charInput">Nhap mot ki tu: </label>
+<input type="text" id="charInput">
+<button onclick="checkVowelConsonant()">kiem tra</button>
+
+<p id="result"></p>
+
+<script>
+    function checkVowelConsonant() {
+        const inputChar = document.getElementById("charInput").value.toLowerCase();
+        let result;
+
+        if (inputChar.length === 1) {
+            switch (inputChar) {
+                case 'a':
+                case 'e':
+                case 'i':
+                case 'o':
+                case 'u':
+                    result = "Ki tu nay la mot nguyen am";
+                    break;
+                default:
+                    result = "Ki tu nay la mot phu am";
+                    break;
+            }
+        } else {
+            result = "vui long nhap mot ki tu duy nhat";
+        }
+
+        document.getElementById("result").textContent = result;
+    }
+</script>
+</body>
+</html>

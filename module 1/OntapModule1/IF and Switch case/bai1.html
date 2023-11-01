@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tinh thue</title>
+</head>
+<body>
+<h1>Tinh thue thu nhap va luong</h1>
+
+<label for="salary">Nhap luong nhan vien (VND): </label>
+<input type="number" id="salaryInput">
+<button onclick="calculateIncome()">Tinh toan</button>
+
+<p id="result"></p>
+
+<script>
+    function calculateIncome() {
+        const salary = parseInt(document.getElementById("salaryInput").value);
+
+        let taxPercentage;
+        let taxAmount;
+
+        if (salary >= 15000000) {
+            taxPercentage = 20;
+        } else if (salary >= 7000000) {
+            taxPercentage = 10;
+        } else {
+            taxPercentage = 5;
+        }
+
+        taxAmount = (salary * taxPercentage) / 100;
+        const netIncome = salary - taxAmount;
+
+        const result = `Luong: ${salary} VND<br>thue thu nhap (${taxPercentage}%): ${taxAmount} VND<br>luong rong: ${netIncome} VND`;
+
+        document.getElementById("result").innerHTML = result;
+    }
+</script>
+</body>
+</html>
