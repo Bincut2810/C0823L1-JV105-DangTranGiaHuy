@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Max Fraction Index</title>
+</head>
+<body>
+<script>
+    function maxFraction(numerators, denominators) {
+        let maxFractionValue = numerators[0] / denominators[0];
+        let maxFractionIndex = 0;
+
+        for (let i = 1; i < numerators.length; i++) {
+            let fractionValue = numerators[i] / denominators[i];
+            if (fractionValue > maxFractionValue) {
+                maxFractionValue = fractionValue;
+                maxFractionIndex = i;
+            }
+        }
+
+        return maxFractionIndex;
+    }
+
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+
+    let maxIndex = maxFraction(numerators, denominators);
+
+    document.write("chi so cua phan so lon nhat la " + maxIndex);
+</script>
+</body>
+</html>

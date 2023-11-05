@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Missing Values</title>
+</head>
+<body>
+<script>
+  function missingValue(A, B) {
+    let setA = new Set(A);
+    let setB = new Set(B);
+
+    let result = [];
+
+    for (let element of setB) {
+      if (!setA.has(element)) {
+        result.push(element);
+      }
+    }
+
+    return result;
+  }
+
+  let A = [7, 2, 5, 3, 5, 3];
+  let B = [7, 2, 5, 4, 6, 3, 5, 3];
+
+  let missingValues = missingValue(A, B);
+
+  document.write("Missing Values: " + JSON.stringify(missingValues));
+</script>
+</body>
+</html>

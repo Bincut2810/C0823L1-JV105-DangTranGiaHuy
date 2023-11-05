@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CharacterMovingGame</title>
+</head>
+<body>
+<div id="pikachu_race"></div>
+<br>
+<div id="tho_race"></div>
+<br>
+<div id="rua_race"></div>
+
+<script>
+    class Hero {
+        constructor(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+        }
+        get image() {
+            return this.image;
+
+        }
+        set image(value) {
+            this.image = value;
+        }
+        get top() {
+            return this.top;
+        }
+        set top(value) {
+            this.top = value;
+        }
+        get left() {
+            return this.left;
+        }
+        set left(value) {
+            this.left = value;
+        }
+        get size() {
+            return this.size;
+        }
+        set size(value) {
+            this.size=value;
+        }
+        getHeroElement (){
+            return '<img width="'+ this.size + '"' +
+                ' height="'+ this.size + '"' +
+                ' src="' + this.image +'"' +
+                ' style="top: '+this.top+'px; left:'+this.left+'px;position:absolute;" />';
+        };
+        moveRight(speech) {
+            this.left += speech;
+        };
+    }
+    let pikachu = new Hero('pikachu.png', 40,70,200);
+    let rua = new Hero('rua.png', 40,70,200);
+    let tho = new Hero('tho.png', 40,70,200);
+
+    let pikachu_sp = 0;
+    let rua_sp = 0;
+    let tho_sp = 0;
+
+    function start() {
+        if (pikachu.left < window.innerWidth - pikachu.size){
+            pikachu.moveRight(pikachu_sp);
+            if (pikachu_sp < window.innerWidth/2){
+                pikachu_sp+=1;
+            } else {
+                pikachu_sp +=0.01;
+            }
+        }
+        if (tho.left < window.innerWidth - tho.size) {
+            tho.moveRight(tho_sp);
+            if (tho_sp < window.innerWidth/2){
+                tho_sp+=1.1;
+            } else {
+                tho_sp +=0.29;
+            }
+        }
+        if (rua.left < window.innerWidth - rua.size) {
+            rua.moveRight(rua_sp);
+            rua_sp +=0.88;
+            }
+        document.getElementById('pikachu_race').innerHTML = pikachu.getHeroElement();
+        document.getElementById('rua_race').innerHTML = rua.getHeroElement();
+        document.getElementById('tho_race').innerHTML = tho.getHeroElement();
+        setTimeout(start,180);
+
+    }
+    start();
+</script>
+</body>
+</html>
