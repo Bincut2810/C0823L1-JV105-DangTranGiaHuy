@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function differentSymbolsNaive(inputString)
+    {
+        let uniqueChars = new Set();
+
+        for (let i = 0; i < inputString.length; i++) {
+            uniqueChars.add(inputString[i]);
+
+        }
+
+        return uniqueChars.size;
+    }
+
+    function main()
+    {
+        let inputString = prompt("Nhap xau ki tu: ");
+
+        let result = differentSymbolsNaive(inputString);
+
+        console.log(`so luong ki tu khac nhau trong xau la: ${result}`);
+    }
+
+    main();
+</script>
+
+</body>
+</html>

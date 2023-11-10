@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function commonCharacterCount(s1, s2)
+    {
+        let commonCount = 0;
+
+        let arrS1 = s1.split('');
+        let arrS2 = s2.split('');
+
+        for (let char of arrS1)
+        {
+            let index = arrS2.indexOf(char);
+            if (index !== -1)
+            {
+                arrS2.splice(index, 1);
+                commonCount++;
+            }
+        }
+
+        return commonCount;
+    }
+
+
+    //ham main
+    function main()
+    {
+        let s1 = prompt("nhap xau ki tu thu nhat:");
+        let s2 = prompt("nhap xau ki tu thu hai: ");
+
+
+        let result = commonCharacterCount(s1,s2);
+
+        console.log(`so luong ki tu chung la: ${result}`);
+    }
+
+
+    main();
+</script>
+
+</body>
+</html>

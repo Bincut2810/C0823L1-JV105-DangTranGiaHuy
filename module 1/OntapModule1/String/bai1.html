@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>String manipulation</title>
+</head>
+<body>
+<script>
+    function normalizeString(inputString)
+    {
+        let words = inputString.toLowerCase().split(/\s+/);
+        words = words.map(word => word.charAt(0).toUpperCase() + word.slice(1) );
+        return words.join('');
+    }
+
+    function findLongestWord(inputString)
+    {
+        let words = inputString.split(/\s+/);
+        let longestWord = "";
+        for (let i = 0; i < words.length; i++) {
+            if (words[i].length > longestWord.length)
+            {
+                longestWord = words[i];
+            }
+
+        }
+        return longestWord;
+    }
+
+    //ham main
+    function main()
+    {
+        let inputString = prompt("moi nhap xau ki tu:  ");
+        console.log("Xau truoc khi chuan hoa", inputString);
+
+        // chuan hoa
+
+        let normalizedString = normalizeString(inputString);
+
+        console.log("Xau sau khi chuan hoa: ",normalizedString);
+        let longestWord = findLongestWord(normalizedString);
+
+        console.log("tu dai nhat trong sau: ", longestWord);
+    }
+    main();
+</script>
+
+</body>
+</html>
