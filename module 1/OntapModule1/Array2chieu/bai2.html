@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= device-width, initial-scale=1.0">
+    <title>Prime Numbers in 2D Array</title>
+</head>
+<body>
+<script>
+    let rows = prompt("Enter rows");
+    let cols = prompt("Enter cols");
+
+    let n;
+    let count = 0;
+
+    let array = [];
+
+    for (let i = 0; i < rows; i++) {
+        array[i] = [];
+        for (let j = 0; j < cols; j++) {
+            n = parseInt(prompt(`Enter value at row: ${i+1}, and column:  ${j+1}`));
+            array[i][j] = n;
+            if (array[i][j] > 1)
+            {
+                for (let k = 2; k <= Math.sqrt(array[i][j]); k++)
+                {
+                    if (array[i][j] % k !== 0)
+                    {
+                        count++;
+                    }
+                }
+            }
+        }
+
+        alert(count);
+    }
+</script>
+
+</body>
+</html>

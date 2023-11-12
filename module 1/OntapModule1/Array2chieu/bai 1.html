@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width = device-width, initial-scale=1.0">
+    <title>Tinh tong so chan trong ma tran</title>
+    <style>
+        body
+        {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ham tinh tong ma tran</h2>
+
+    <label for="rows">Enter number of rows: </label>
+    <input type="number" id="rows" placeholder="Enter rows"/>
+
+    <label for="cols">Enter number of columns</label>
+    <input type="number" id="cols" placeholder="Enter cols"/>
+
+    <button onclick="createMatrix()">Create Matrix</button>
+
+    <h3>Matrix:</h3>
+    <table id="matrixTable" border="1"></table>
+
+    <h3>Tong cua so chan la:</h3>
+    <p id="result"></p>
+
+
+<script>
+        function createMatrix()
+        {
+            let rows = document.getElementById("rows").value;
+            let cols = document.getElementById("cols").value;
+
+            let matrixTable = document.getElementById("matrixTable");
+            let resultParagraph = document.getElementById("result");
+
+            matrixTable.innerHTML = "";
+
+            let matrix = [];
+
+            for (let i = 0; i < rows; i++) {
+                let row = matrixTable.insertRow(i);
+                matrix[i] = [];
+
+                for (let j = 0; j < cols; j++) {
+                    let cell = row.insertCell(j);
+                    let input = document.createElement("input");
+                    input.type = "number";
+                    matrix[i][j] = input;
+                    cell.appendChild(input);
+                }
+            }
+
+            let calculateButton = document.createElement("button");
+            calculateButton.innerHTML = "Calculate Sum";
+            calculateButton.onclick = function ()
+            {
+                let sum = calculateSum(matrix, rows, cols);
+                resultParagraph.innerHTML = "Sum of even numbers: " + sum;
+            };
+
+            document.body.appendChild(calculateButton);
+        }
+
+        function calculateSum(matrix, rows, cols)
+        {
+            let sum = 0;
+
+            for (let i = 0; i < rows; i++) {
+                for (let j = 0; j < cols; j++) {
+                    let value = parseInt(matrix[i][j].value);
+                    if (!isNaN(value) && value % 2 === 0) {
+                        sum += value;
+                    }
+                }
+            }
+            return sum;
+        }
+</script>
+</body>
+</html>

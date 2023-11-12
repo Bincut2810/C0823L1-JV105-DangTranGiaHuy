@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function findMinMaxValues(array)
+    {
+        let minValue = Infinity;
+        let maxValue = -Infinity;
+
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                const currentValue = array[i][j];
+
+                if (currentValue < minValue) {
+                    minValue = currentValue;
+                }
+
+                if (currentValue > maxValue)
+                {
+                    maxValue = currentValue;
+                }
+            }
+        }
+
+        console.log(`Minimum value:  ${minValue}`);
+        console.log(`Maximum value:  ${maxValue}`);
+    }
+
+    const twoDArray =
+        [
+            [5,12,3],
+            [8,21,15],
+            [7,10,6]
+        ];
+
+    findMinMaxValues(twoDArray);
+</script>
+
+</body>
+</html>
